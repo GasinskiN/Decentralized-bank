@@ -1,2 +1,4 @@
 service : {
+  addValue: (nat) -> () oneway;
+  withdrawValue: (nat) -> () oneway;
 }
