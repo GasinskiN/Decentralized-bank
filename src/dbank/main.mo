@@ -13,8 +13,13 @@ actor DBank {
   };
 
   public func withdrawValue(amount: Nat){
+    if ( amount < currencyValue){
     currencyValue -= amount;
     Debug.print(debug_show (currencyValue));
+    }
+    else {
+      Debug.print("You tried to withdraw more than you have");
+    }
   };
 
   // addValue();
