@@ -1,4 +1,5 @@
 import Debug "mo:base/Debug";
+import Nat "mo:base/Nat";
 
 actor DBank {
   var currencyValue = 300;
@@ -6,6 +7,15 @@ actor DBank {
 
   let id = 2358233;
 
-  Debug.print(debug_show(id));
-  Debug.print(debug_show(currencyValue));
+  public func addValue(amount: Nat){
+    currencyValue += amount;
+    Debug.print(debug_show(currencyValue));
+  };
+
+  public func withdrawValue(amount: Nat){
+    currencyValue -= amount;
+    Debug.print(debug_show (currencyValue));
+  };
+
+  // addValue();
 }
